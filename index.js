@@ -1,24 +1,24 @@
 var katzDeli = [];
 
-function takeANumber (line, name) {
-  line.push(name);
-  return `Welcome, ${name}. You are number ${line.length} in line.`;
+function takeANumber (katzDeliline, name) {
+  katzDeliline.push(name);
+  return `Welcome, ${name}. You are number ${katzDeliline.length} in line.`;
 };
 
-function nowServing (line) {
-  if (!line.length) {
+function nowServing (katzDeliline) {
+  if (!katzDeliline.length) {
     return `There is nobody waiting to be served!`;
-  } return `Currently serving ${line.shift()}.`
+  } return `Currently serving ${katzDeliline.shift()}.`
 };
 
-function currentLine (line) {
-  if (!line.length) {
+function currentLine (katzDeliline) {
+  if (!katzDeliline.length) {
     return `The line is currently empty.`
   }
 
   var numbersAndNames = [];
-  for (var i = 0; i < line.length; i++) {
-    numbersAndNames.push(`${i + 1}. ${line[i]}`);
+  for (var i = 0; i < katzDeliline.length; i++) {
+    numbersAndNames.push(`${i + 1}. ${katzDeliline[i]}`);
   }
   return `The line is currently: ${numbersAndNames.join(', ')}`;
 };
