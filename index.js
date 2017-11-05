@@ -2,7 +2,7 @@ var katzDeli = [];
 
 function takeANumber (line, name) {
   line.push(name);
-  return `Welcome, ${name}. You are number ${line.length} in line`;
+  return `Welcome, ${name}. You are number ${line.length} in line.`;
 };
 
 function nowServing (line) {
@@ -18,7 +18,7 @@ function currentLine (line) {
 
   var numbersAndNames = [];
   for (var i = 0; i < line.length; i++) {
-    numbersAndNames.push(`${i + 1}. ${line[i]}`);
+    numbersAndNames.push(`${i + 1}. ${line[i]}.`);
   }
   return `The line is currently: ${numbersAndNames.join(', ')}`;
 };
